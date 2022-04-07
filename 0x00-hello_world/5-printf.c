@@ -1,6 +1,6 @@
 # include <stdio.h>
 /**
- * main - entry point
+ * main -The main entry point
  * printf - output task
  * Return 0 to complete task
  */
