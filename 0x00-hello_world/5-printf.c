@@ -1,11 +1,12 @@
 # include <stdio.h>
 /**
- * main - Entry point
- * printf - ourput the data
- * Retun - 1after code execute
+ * main - entry point
+ * printf - output message on the screen
+ * Return: 0 after printing the function
  */
 int main(void)
 {
-	printf("with proper grammar, but the outcome is a piece of art,\n");
-	return (0);
+        printf("with proper grammar, but the outcome is a piece of art,\n");
+        return (0);
 }
+
