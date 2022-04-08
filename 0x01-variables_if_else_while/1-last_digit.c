@@ -6,7 +6,6 @@
  *
  * Return: after code execution
 */
-
 int main(void)
 {
         int n, lastd;
