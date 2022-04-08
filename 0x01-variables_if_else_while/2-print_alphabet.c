@@ -1,7 +1,6 @@
 #include <stdio.h>
-
 /**
- * main 
+ * main - The entry point 
  *
  * Return: Always (Success)i
  */
