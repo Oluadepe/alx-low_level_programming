@@ -1,5 +1,3 @@
-task 9
-
 #include "main.h"
 /**
  * times_table - prints the 9 times table, string with 0.
