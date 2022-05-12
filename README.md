@@ -1,1 +1,1 @@
-My first C programing repository
+This repository is about C programing language
