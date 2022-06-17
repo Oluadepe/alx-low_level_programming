@@ -1,22 +1,40 @@
 #include "main.h"
-/**
- * binary_to_uint - converts a binary number to unsigned int
- * @b: string containing the binary number
- *
- * Return: the converted number
- */
 
-unsigned  int binary_to_uint(const char *b)
+/**
+ * read_textfile - reads a text file and prints it to the POSIX standard output
+ * @filename: name of the file to read
+ * @letters: number of letters it should read and print
+ *
+ * Return: actual number of letters it could read and print
+**/
+
+ssize_t read_textfile(const char *filename, size_t letters)
 {
-int n;
-unsigned int decimal = 0;
-if (!b)
+int fd;
+ssize_t lenr, lenw;
+char *buffer;
+
+if (filename == NULL)
 return (0);
-for (n = 0; b[n]; n++)
+fd = open(filename, O_RDONLY);
+if (fd == -1)
+return (0);
+buffer = malloc(sizeof(char) * letters);
+if (buffer == NULL)
 {
-if (b[n] < '0' || b[n] > '1')
+close(fd);
 return (0);
-decimal = 2 * decimal + (b[n] - '0');
 }
-return (decimal);
+lenr = read(fd, buffer, letters);
+close(fd);
+if (lenr == -1)
+{
+free(buffer);
+return (0);
+}
+lenw = write(STDOUT_FILENO, buffer, lenr);
+free(buffer);
+if (lenr != lenw)
+return (0);
+return (lenw);
 }
