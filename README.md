@@ -1,1 +1,1 @@
-This repository is about C programing language
+This repository is about C programing language Training
